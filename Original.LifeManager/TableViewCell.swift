@@ -20,7 +20,7 @@ class TableViewCell: UITableViewCell {
     func setData() -> Void {
         //チェックボックスを追加
         checkbox.frame = CGRect(x: self.frame.width - 44, y: 0, width: 22, height: self.frame.height)
-        checkbox.checkboxColor = UIColor.blackColor()
+        checkbox.checkboxColor = UIColor.black
         checkbox.checkboxSideLength = 22
         self.addSubview(checkbox)
     }

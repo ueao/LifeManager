@@ -87,7 +87,7 @@ class ToDoTableViewController: UITableViewController {
 
         //チェックボックスのタグ
         cell.checkbox.tag = indexPath.row
-        cell.checkbox.addTarget(self, action: "checked:", forControlEvents: .ValueChanged)
+        cell.checkbox.addTarget(self, action: #selector(ToDoTableViewController.checked(_:)), for: .valueChanged)
         cell.setData()
         return cell
     }
@@ -177,7 +177,8 @@ class ToDoTableViewController: UITableViewController {
         func setData() -> Void {
             ////チェックボックスを追加します
             checkbox.frame = CGRect(x: self.frame.width - 44, y: 0, width: 22, height: self.frame.height)
-            checkbox.checkboxColor = UIColor.blackColor()
+            checkbox.checkboxColor = UIColor.black
+        
             checkbox.checkboxSideLength = 22
             self.addSubview(checkbox)
         }

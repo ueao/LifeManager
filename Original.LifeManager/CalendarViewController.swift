@@ -45,7 +45,8 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
     //とどくんのコメントを表示する
     
     @IBOutlet var commentLabel: UILabel!
-    var commentArray = [AnyObject]()
+    //Swift3.0からAnyobject→Any
+    var commentArray = [Any]()
     var ccount = Int(arc4random() % 16)
     
 
@@ -285,8 +286,8 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
         
         
         //とどくん喋らせるよう///////////
-        commentArray.append(["ToDoListを見てみよう"])
-        commentArray.append(["The Sky is the limit!"])
+        commentArray.append([ "ToDoListを見てみよう" ])
+        commentArray.append([ "The Sky is the limit!" ])
         commentArray.append(["今日は何の日？"])
         commentArray.append(["大安の日は結婚式が多いんだよ"])
         commentArray.append(["2月29日は四年に一度！"])
@@ -563,12 +564,10 @@ class ViewController: UIViewController,UIGestureRecognizerDelegate {
             commentLabel.text = ""
         }
         if ccount  == 1{
-            commentLabel.text = commentArray[ccount][0] as? String
-            
+            commentLabel.text = commentArray[ccount][0]
         }
         else{
-            commentLabel.text = commentArray[ccount] [0] as? String
-            
+            commentLabel.text = commentArray[ccount][0]
         }
 
     }

@@ -43,7 +43,7 @@ class AddViewController: UIViewController,UITextFieldDelegate  {
         
         //取り出すための
         if saveData.array(forKey: "WORD") != nil {
-            wordArray = saveData.array(forKey: "WORD")! as [AnyObject]
+            wordArray = saveData.array(forKey: "WORD")! as [Any] as [AnyObject]
         }
         
         
@@ -88,10 +88,10 @@ class AddViewController: UIViewController,UITextFieldDelegate  {
         
         //ボタンの設定
         //右寄せのためのスペース設定
-        let spaceBarButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace,target: self,action: "")
+        let spaceBarButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace,target: self,action: Selector(""))
         
         //完了ボタンを設定
-        _ = UIBarButtonItem(title: "完了", style: .done, target: self, action: "toolBarBtnPush:")
+        _ = UIBarButtonItem(title: "完了", style: .done, target: self, action: Selector(("toolBarBtnPush:")))
         
         //ツールバーにボタンを表示
         ToolBar.items = [spaceBarButton,toolBarButton]
@@ -130,7 +130,7 @@ class AddViewController: UIViewController,UITextFieldDelegate  {
     @IBAction func saveWord() {
         let wordDictionary = ["todo":ToDoTextField.text!,"memo":MemoTextField.text!,"date":DateTextField.text!]
         
-        wordArray.append(wordDictionary as AnyObject)
+        wordArray.append(wordDictionary as Any as AnyObject)
         
         saveData.set(wordArray, forKey: "WORD")
         

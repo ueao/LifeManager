@@ -98,7 +98,7 @@
                     <connections>
                         <outlet property="ToDokun" destination="SE3-61-khw" id="DJE-Id-01k"/>
                         <outlet property="calendarBar" destination="LqR-Yr-KSj" id="FvA-aw-I06"/>
-                        <outlet property="commentLabel" destination="o33-9T-HI8" id="7YP-e2-7lC"/>
+                        <outlet property="commentLabel" destination="o33-9T-HI8" id="U0p-Ao-cuw"/>
                         <outlet property="nextMonthButton" destination="3eS-n9-FGr" id="T8d-oY-whX"/>
                         <outlet property="prevMonthButton" destination="H8y-fk-nnf" id="ODR-t4-sGX"/>
                     </connections>
